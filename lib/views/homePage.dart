@@ -56,33 +56,33 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-            // Column(
-            //   children: List.generate(listaProduto.length, (index){
-            //     ProdutoModel produtoModel = listaProduto[index]; 
-            //     return ListTile(
-            //       title: Text(produtoModel.nome),
-            //       subtitle: Text(' Estoque: ${produtoModel.quantidade} - preço: R\$ ${produtoModel.preco}'),
-            //       trailing: IconButton(
-            //         icon: Icon(Icons.delete), 
-            //         onPressed: () { 
-            //             showDialog(context: context, builder: (BuildContext context ){
-            //               return AlertDialog(
-            //                 title: Text('Deletar'),
-            //                 content: Text("Você deseja Deletar o Item: ${produtoModel.nome}?"),
-            //                 actions: [
-            //                   TextButton(onPressed: (){
-            //                     Navigator.of(context).pop();
-            //                   }, 
-            //                   child: Text("Cancelar")),
-            //                   TextButton(onPressed: (){}, child: Text("Deletar"))
-            //                 ],
-            //               );
-            //             },
-            //             );
-            //          },
-            //          ),
-            //     );
+            // // // Column(
+            // // //   children: List.generate(listaProduto.length, (index){
+            // // //     ProdutoModel produtoModel = listaProduto[index]; 
+            // // //     return ListTile(
+            // // //       title: Text(produtoModel.nome),
+            // // //       subtitle: Text(' Estoque: ${produtoModel.quantidade} - preço: R\$ ${produtoModel.preco}'),
+            // // //       trailing: IconButton(
+            // // //         icon: Icon(Icons.delete), 
+            // // //         onPressed: () { 
+            // // //             showDialog(context: context, builder: (BuildContext context ){
+            // // //               return AlertDialog(
+            // // //                 title: Text('Deletar'),
+            // // //                 content: Text("Você deseja Deletar o Item: ${produtoModel.nome}?"),
+            // // //                 actions: [
+            // // //                   TextButton(onPressed: (){
+            // // //                     Navigator.of(context).pop();
+            // // //                   }, 
+            // // //                   child: Text("Cancelar")),
+            // // //                   TextButton(onPressed: (){}, child: Text("Deletar"))
+            // // //                 ],
+            // // //               );
+            // // //             },
+            // // //             );
+            // // //          },
+            // // //          ),
+            // // //     );
 
-            //   }
-            //   ),
-            // ),
+            // // //   }
+            // // //   ),
+            // // // ),
