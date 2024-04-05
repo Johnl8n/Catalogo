@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:listaprodutos/models/Produto.dart';
+import 'package:listaprodutos/views/produtosDetalhes.dart';
 
 class Produtos extends StatelessWidget {
    Produtos({super.key});
 
     final List<ProdutoModel> listaProduto = [
-    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png'),
-    ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.55, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png'),
+    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png'),
+    ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png'),
     ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png'),
     ProdutoModel(nome: "Mouse Gamer, Redragon RGB ajustável", quantidade: 4, preco: 150.30, descricao: "Mouse ótimo para jogos de fps", imagem: 'assets/item3.png'),
     ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png'),
-    ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.55, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png'),
+    ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png'),
     ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png'),
-    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png'),
+    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png'),
   ];
 
   @override
@@ -36,7 +37,14 @@ class Produtos extends StatelessWidget {
               child: Column(
                 children: [
                   InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProdutosDetalhes(produto: produtoModel), 
+                        ), 
+                      );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
@@ -69,8 +77,9 @@ class Produtos extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
+                                      
                                       Text('em ', style: TextStyle(fontSize: 8),),
-                                      Text('10x de R\$ ${produtoModel.preco} sem juros', style: TextStyle(color: Colors.green, fontSize: 8),),
+                                      Text('10x de R\$ ${(produtoModel.preco / 10).toStringAsFixed(2)} sem juros', style: TextStyle(color: Colors.green, fontSize: 8),),
                                     ],
                                   ),
                                   Row(
