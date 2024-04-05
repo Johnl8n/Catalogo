@@ -19,8 +19,8 @@ class HomePage extends StatelessWidget {
       backgroundColor:Color.fromRGBO(242, 242, 242, 10),
 
       appBar: AppBar(
-        title:  Text("Catálogo de produtos", style: TextStyle(color: Color.fromRGBO(242, 242, 242, 10)),),
-        backgroundColor: Color.fromRGBO(242,56,143, 10),
+        title: const Text("Catálogo de produtos", style: TextStyle(color: Color.fromRGBO(242, 242, 242, 10)),),
+        backgroundColor: const Color.fromRGBO(242,56,143, 10),
       ),
       drawer: const Drawer(
         child: Column(
@@ -42,8 +42,8 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.centerLeft,
-                    margin: EdgeInsets.symmetric(vertical: 20),
-                    child: Text('Itens da Loja', style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromRGBO(242, 56, 143, 10), fontSize: 20),),
+                    margin: const EdgeInsets.symmetric(vertical: 20),
+                    child: const Text('Itens da Loja', style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromRGBO(242, 56, 143, 10), fontSize: 20),),
                   ),
                   Produtos(),
                 ],

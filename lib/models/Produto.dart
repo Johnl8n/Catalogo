@@ -4,6 +4,8 @@ class ProdutoModel {
   double preco;
   String descricao;
   String imagem;
+  String cidade;
+  String estado;
 
   ProdutoModel (
     {
@@ -11,7 +13,9 @@ class ProdutoModel {
       required this.quantidade,
       required this.preco,
       required this.descricao,
-      required this.imagem
+      required this.imagem,
+      required this.cidade,
+      required this.estado,
     }
   );
 
