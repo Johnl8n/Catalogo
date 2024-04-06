@@ -115,7 +115,7 @@ class _ProdutosDetalhesState extends State<ProdutosDetalhes> {
                               TextButton(onPressed: (){
                                 _decrementar();
                               }, 
-                              child: Icon(CupertinoIcons.minus, size: 18, color: Color.fromRGBO(166,10,39,10) ))
+                              child: Icon(CupertinoIcons.minus, size: 18, color: Colors.white ))
                             ],
                           ),
                           ),
@@ -141,7 +141,7 @@ class _ProdutosDetalhesState extends State<ProdutosDetalhes> {
                               TextButton(onPressed: (){
                                 _incrementar();
                               }, 
-                              child: Icon(CupertinoIcons.plus, size: 18, color: Color.fromRGBO(166,10,39,10),))
+                              child: Icon(CupertinoIcons.plus, size: 18, color: Colors.white,))
                             ],
                           ),
                           ),
@@ -174,7 +174,7 @@ class _ProdutosDetalhesState extends State<ProdutosDetalhes> {
                               },
                             );
                             }, 
-                            child: Text('Adicionar ao carrinho', style: TextStyle(color: Colors.black),), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(166,10,39,10))),),),
+                            child: Text('Adicionar ao carrinho', style: TextStyle(color: Colors.white),), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(166,10,39,10))),),),
                       ),
                      ],
               ),

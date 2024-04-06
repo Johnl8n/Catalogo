@@ -18,17 +18,17 @@ class _ProdutosState extends State<Produtos> {
       ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png', cidade: 'Parnaíba', estado: 'Piauí'),
       ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png', cidade: 'Parnaíba', estado: 'Piauí'),
       ProdutoModel(nome: "Mouse Gamer, Redragon RGB ajustável", quantidade: 4, preco: 150.30, descricao: "Mouse ótimo para jogos de fps", imagem: 'assets/item3.png', cidade: 'Parnaíba', estado: 'Piauí'),
-      ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item4.png', cidade: 'Parnaíba', estado: 'Piauí'),
-      ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/img04.png', cidade: 'Parnaíba', estado: 'Piauí'),
-      ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/img01.png', cidade: 'Parnaíba', estado: 'Piauí'),
-      ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/img02.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa", imagem: 'assets/item4.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Ferrari da Hello Kitty", quantidade: 4, preco: 3500.50, descricao: "Muito veloz", imagem: 'assets/img04.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Brinquedo Hello Kitty", quantidade: 4, preco: 210.20, descricao: "Good like", imagem: 'assets/img01.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Borracha 'Apaga tudo'", quantidade: 4, preco: 670.50, descricao: "Apaga mesmo!", imagem: 'assets/img02.png', cidade: 'Parnaíba', estado: 'Piauí'),
   ];
 
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       physics: ScrollPhysics(),
-      childAspectRatio: 0.46,
+      childAspectRatio: 0.44,
       crossAxisCount: 2,
       shrinkWrap: true,
       children: List.generate(listaProduto.length, (index){
@@ -77,6 +77,7 @@ class _ProdutosState extends State<Produtos> {
                                     children: [
                                       Text(produtoModel.nome),
                                       SizedBox(height: 5,),
+                                      Text('Quantidade: ${produtoModel.quantidade}', style: TextStyle(color: Colors.black),),
                                       Text('R\$ ${produtoModel.preco}', style: TextStyle(color: Colors.green),),
                                     ],
                                   ),
