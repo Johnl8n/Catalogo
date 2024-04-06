@@ -8,7 +8,7 @@ class Produtos extends StatelessWidget {
    Produtos({super.key});
 
     final List<ProdutoModel> listaProduto = [
-    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png', cidade: 'Parnaíba', estado: 'Piauí'),
+    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira ótima para passar mais de 16 horas jogando, é feita com pena de ganço do monte everest", imagem: 'assets/item0.png', cidade: 'Parnaíba', estado: 'Piauí'),
     ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png', cidade: 'Parnaíba', estado: 'Piauí'),
     ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png', cidade: 'Parnaíba', estado: 'Piauí'),
     ProdutoModel(nome: "Mouse Gamer, Redragon RGB ajustável", quantidade: 4, preco: 150.30, descricao: "Mouse ótimo para jogos de fps", imagem: 'assets/item3.png', cidade: 'Parnaíba', estado: 'Piauí'),

@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     margin: const EdgeInsets.symmetric(vertical: 20),
-                    child: const Text('Itens da Loja', style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromRGBO(242, 56, 143, 10), fontSize: 20),),
+                    child: const Text('Itens da Loja Kitty', style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromRGBO(242, 56, 143, 10), fontSize: 20),),
                   ),
                   Produtos(),
                 ],
