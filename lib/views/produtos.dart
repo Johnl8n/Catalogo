@@ -108,6 +108,9 @@ class _ProdutosState extends State<Produtos> {
                                                   listaProduto.removeAt(index);
                                                 });
                                                 Navigator.of(context).pop();
+                                                ScaffoldMessenger.of(context).showSnackBar(
+                                                SnackBar(content: Text('Produto Deletado'), duration: Duration(seconds: 2),)
+                                                );
                                               },
                                                   child: const Text('Deletar', style: TextStyle(color: Colors.red),))
                                             ],
