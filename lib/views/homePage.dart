@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:listaprodutos/models/Produto.dart';
 import 'package:listaprodutos/views/produtos.dart';
 
+import 'infoGrupo.dart';
+
 class HomePage extends StatelessWidget {
-
-  // final List<ProdutoModel> listaProduto = [
-  //   ProdutoModel(nome: "Cadeira Gamer", quantidade: 4, preco: 670.0, descricao: "Cadeira boa para kikar em cima delaaa, ainnn"),
-  //   ProdutoModel(nome: "Pc Gamer", quantidade: 4, preco: 3500.0, descricao: "Roda de tudo, o bixo é bom"),
-  //   ProdutoModel(nome: "Teclado Gamer", quantidade: 4, preco: 210.0, descricao: "Teclado ótimo para jogos de fps"),
-  //   ProdutoModel(nome: "Mouse Gamer", quantidade: 4, preco: 150.0, descricao: "Mouse ótimo para jogos de fps"),
-  // ];
-
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +17,41 @@ class HomePage extends StatelessWidget {
         title: const Text("Catálogo de produtos", style: TextStyle(color: Color.fromRGBO(242, 242, 242, 10)),),
         backgroundColor: const Color.fromRGBO(242,56,143, 10),
       ),
-      drawer: const Drawer(
-        child: Column(
+      drawer: Drawer(
+
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
-            ListTile(
-              title: Text('Integrantes do grupo', style: TextStyle(fontWeight: FontWeight.bold),),
-              subtitle: Text('Sávio Rodrigues'),
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(242, 56, 143, 10),
+              ),
+              child: Text(
+                'Menu kitty Store',
+                style: TextStyle(
+                  color: Color.fromRGBO(242, 242, 242, 10),
+                  fontSize: 24,
+                ),
+              ),
             ),
-        ],
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: ListTile(
+                title: const Text('Informações do grupo', style: TextStyle(color: Colors.white)), // Define a cor do texto
+                onTap: () {
+                  Navigator.pop(context); // Fecha o Drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const infoGrupo()),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
 
@@ -56,33 +78,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-            // // // Column(
-            // // //   children: List.generate(listaProduto.length, (index){
-            // // //     ProdutoModel produtoModel = listaProduto[index]; 
-            // // //     return ListTile(
-            // // //       title: Text(produtoModel.nome),
-            // // //       subtitle: Text(' Estoque: ${produtoModel.quantidade} - preço: R\$ ${produtoModel.preco}'),
-            // // //       trailing: IconButton(
-            // // //         icon: Icon(Icons.delete), 
-            // // //         onPressed: () { 
-            // // //             showDialog(context: context, builder: (BuildContext context ){
-            // // //               return AlertDialog(
-            // // //                 title: Text('Deletar'),
-            // // //                 content: Text("Você deseja Deletar o Item: ${produtoModel.nome}?"),
-            // // //                 actions: [
-            // // //                   TextButton(onPressed: (){
-            // // //                     Navigator.of(context).pop();
-            // // //                   }, 
-            // // //                   child: Text("Cancelar")),
-            // // //                   TextButton(onPressed: (){}, child: Text("Deletar"))
-            // // //                 ],
-            // // //               );
-            // // //             },
-            // // //             );
-            // // //          },
-            // // //          ),
-            // // //     );
-
-            // // //   }
-            // // //   ),
-            // // // ),

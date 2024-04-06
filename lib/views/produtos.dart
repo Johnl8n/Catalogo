@@ -4,18 +4,24 @@ import 'package:flutter/widgets.dart';
 import 'package:listaprodutos/models/Produto.dart';
 import 'package:listaprodutos/views/produtosDetalhes.dart';
 
-class Produtos extends StatelessWidget {
+
+class Produtos extends StatefulWidget {
    Produtos({super.key});
 
+  @override
+  State<Produtos> createState() => _ProdutosState();
+}
+
+class _ProdutosState extends State<Produtos> {
     final List<ProdutoModel> listaProduto = [
-    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira ótima para passar mais de 16 horas jogando, é feita com pena de ganço do monte everest", imagem: 'assets/item0.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Mouse Gamer, Redragon RGB ajustável", quantidade: 4, preco: 150.30, descricao: "Mouse ótimo para jogos de fps", imagem: 'assets/item3.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png', cidade: 'Parnaíba', estado: 'Piauí'),
-    ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item0.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira ótima para passar mais de 16 horas jogando, é feita com pena de ganço do monte everest", imagem: 'assets/item0.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/item1.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/item2.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Mouse Gamer, Redragon RGB ajustável", quantidade: 4, preco: 150.30, descricao: "Mouse ótimo para jogos de fps", imagem: 'assets/item3.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.55, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/item4.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Pc Gamer, ryzen 5 5600G, 16gb ram, RTX 3060", quantidade: 4, preco: 3500.50, descricao: "Roda de tudo, o bixo é bom", imagem: 'assets/img04.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Teclado Gamer, switch azul, ABNT, RGB", quantidade: 4, preco: 210.20, descricao: "Teclado ótimo para jogos de fps", imagem: 'assets/img01.png', cidade: 'Parnaíba', estado: 'Piauí'),
+      ProdutoModel(nome: "Cadeira Gamer de ultima geração, retratil", quantidade: 4, preco: 670.50, descricao: "Cadeira boa para kikar em cima delaaa, ainnn", imagem: 'assets/img02.png', cidade: 'Parnaíba', estado: 'Piauí'),
   ];
 
   @override
@@ -41,8 +47,8 @@ class Produtos extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProdutosDetalhes(produto: produtoModel), 
-                        ), 
+                          builder: (context) => ProdutosDetalhes(produto: produtoModel),
+                        ),
                       );
                     },
                     child: Padding(
@@ -56,7 +62,7 @@ class Produtos extends StatelessWidget {
                                 color: Color.fromRGBO(242, 242, 242, 10),
                                 borderRadius: BorderRadius.circular(15)
                               ),
-                              
+
                               alignment: Alignment.center,
                               width: 200,
                               height: 200,
@@ -77,7 +83,7 @@ class Produtos extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      
+
                                       Text('em ', style: TextStyle(fontSize: 8),),
                                       Text('10x de R\$ ${(produtoModel.preco / 10).toStringAsFixed(2)} sem juros', style: TextStyle(color: Colors.green, fontSize: 8),),
                                     ],
@@ -93,15 +99,21 @@ class Produtos extends StatelessWidget {
                                             actions: [
                                               TextButton(onPressed: (){
                                                 Navigator.of(context).pop();
-                                              }, 
+                                              },
                                               child: Text('Cancelar')
                                               ),
-                                              TextButton(onPressed: (){}, child: Text('Deletar', style: TextStyle(color: Colors.red),))
+                                              TextButton(onPressed: (){
+                                                setState(() {
+                                                  listaProduto.removeAt(index);
+                                                });
+                                                Navigator.of(context).pop();
+                                              },
+                                                  child: const Text('Deletar', style: TextStyle(color: Colors.red),))
                                             ],
                                           );
                                         }
                                         );
-                                      }, 
+                                      },
                                       child: Icon(Icons.delete, color: Colors.red,)),
                                     ],
                                   ),
